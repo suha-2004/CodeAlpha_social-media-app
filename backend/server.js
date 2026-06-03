@@ -54,11 +54,8 @@ app.use("/api/users", userRoutes);
 
 // ================= DATABASE CONNECTION =================
 
-mongoose.connect(
+mongoose.connect(process.env.MONGO_URI)
 
-  "mongodb+srv://suha:suha%402004@cluster0.yco9g8p.mongodb.net/socialmedia?retryWrites=true&w=majority"
-
-)
 
 .then(() => {
 

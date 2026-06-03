@@ -1,4 +1,4 @@
-# 🚀 SocialApp
+# 🚀 SocialSphere App
 
 A modern full-stack social media web application built using HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and JWT Authentication.
 

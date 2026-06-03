@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SocialApp</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <div class="navbar">
+
+    <!-- LOGO -->
+    <div class="nav-left">
+
+      <h1 class="logo">
+        SocialSphere 🚀
+      </h1>
+
+    </div>
+
+
+    <!-- SEARCH -->
+    <div class="nav-center">
+
+      <input type="text" id="searchInput" placeholder="🔍 Search users or posts..." class="search-bar">
+
+    </div>
+
+
+    <!-- BUTTONS -->
+    <div class="nav-buttons">
+
+      <button onclick="window.location.href='feed.html'">
+        🏠 Home
+      </button>
+
+      <button onclick="logout()">
+        🚪 Logout
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ================= MAIN LAYOUT ================= -->
+
+  <div class="main-layout">
+
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+
+    <div class="left-sidebar">
+
+      <div class="sidebar-card">
+
+        <img src="https://i.pravatar.cc/150?img=12" class="sidebar-avatar">
+
+        <h3 id="sidebarUsername">
+          Welcome 👋
+        </h3>
+
+        <p>
+          Full Stack Developer 🚀
+        </p>
+
+      </div>
+
+
+      <div class="sidebar-menu">
+
+        <button onclick="window.location.href='users.html'">
+          👥 Find Users
+        </button>
+
+        <button onclick="window.location.href='liked.html'">
+          ❤️ Liked Posts
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ================= FEED SECTION ================= -->
+
+    <div class="feed-wrapper">
+
+      <div class="feed-container">
+
+
+        <!-- ================= CREATE POST ================= -->
+
+        <div class="create-post">
+
+          <div class="create-post-top">
+
+            <img src="https://i.pravatar.cc/100?img=12" class="create-avatar">
+
+            <textarea id="postText" placeholder="What's on your mind today?"></textarea>
+
+          </div>
+
+
+          <!-- IMAGE INPUT -->
+          <div class="post-actions-bar">
+
+            <input type="file" id="image" accept="image/*">
+
+            <button onclick="createPost()">
+              🚀 Post
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================= POSTS ================= -->
+
+        <div id="posts"></div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ================= RIGHT SIDEBAR ================= -->
+
+    <div class="right-sidebar">
+
+      <div class="trending-card">
+
+        <h3>🔥 Trending</h3>
+
+        <p>#Coding</p>
+
+        <p>#WorldCup</p>
+
+        <p>#Phptography</p>
+
+        <p>#Music</p>
+
+        <p>#Travel</p>
+
+      </div>
+
+
+      
+
+    </div>
+
+
+  </div>
+
+
+  <!-- ================= SCRIPT ================= -->
+
+  <script src="js/feed.js"></script>
+
+</body>
+
+</html>

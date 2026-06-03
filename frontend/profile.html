@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Profile</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+</head>
+
+<body>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <div class="navbar">
+
+    <h1 class="logo">
+      My Profile 👤
+    </h1>
+
+    <div class="nav-buttons">
+
+      <button
+        onclick="window.location.href='feed.html'"
+      >
+        🏠 Feed
+      </button>
+
+      <button onclick="logout()">
+        Logout 🚪
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= PROFILE SECTION ================= -->
+
+  <div class="feed-wrapper">
+
+    <div class="feed-container">
+
+
+      <!-- PROFILE CARD -->
+      <div class="profile-card-modern">
+
+        <img
+          src="https://i.pravatar.cc/150?img=12"
+          class="profile-avatar"
+        >
+
+        <div id="userInfo"></div>
+
+      </div>
+
+
+      <!-- POSTS SECTION -->
+      <div class="create-post">
+
+        <h2>Your Posts 📝</h2>
+
+      </div>
+
+      <div id="myPosts"></div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= SCRIPT ================= -->
+
+  <script src="js/profile.js"></script>
+
+</body>
+
+</html>

@@ -27,7 +27,7 @@ async function loadUsers() {
     try {
 
         const res = await fetch(
-            "http://localhost:5000/api/users"
+            "https://social-media-backend-6ogp.onrender.com/api/users"
         );
 
         const users = await res.json();
@@ -139,7 +139,7 @@ async function followUser(userId) {
 
         const res = await fetch(
 
-            `http://localhost:5000/api/auth/follow/${userId}`,
+            `https://social-media-backend-6ogp.onrender.com/api/auth/follow/${userId}`,
 
             {
 
@@ -181,7 +181,7 @@ async function loadLikedPosts() {
     try {
 
         const res = await fetch(
-            "http://localhost:5000/api/posts"
+            "https://social-media-backend-6ogp.onrender.com/api/posts"
         );
 
         const data = await res.json();
@@ -240,7 +240,7 @@ async function loadLikedPosts() {
                     post.image
                     ? `
                     <img
-                        src="http://localhost:5000/uploads/${post.image}"
+                        src="https://social-media-backend-6ogp.onrender.com/uploads/${post.image}"
                         class="liked-post-image"
                     >
                     `

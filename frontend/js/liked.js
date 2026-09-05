@@ -17,7 +17,7 @@ async function loadLikedPosts() {
   try {
 
     const res = await fetch(
-      "http://localhost:5000/api/posts"
+      "https://social-media-backend-6ogp.onrender.com/api/posts"
     );
 
     const data = await res.json();
@@ -132,7 +132,7 @@ async function loadLikedPosts() {
             post.image
             ? `
               <img
-                src="http://localhost:5000/uploads/${post.image}"
+                src="https://social-media-backend-6ogp.onrender.com/uploads/${post.image}"
                 class="liked-post-image"
               >
             `

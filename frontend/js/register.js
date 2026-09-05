@@ -5,7 +5,7 @@ async function register() {
   const password = document.getElementById("password").value;
 
   const res = await fetch(
-    "http://localhost:5000/api/auth/register",
+    "https://social-media-backend-6ogp.onrender.com/api/auth/register",
     {
       method: "POST",
       headers: {

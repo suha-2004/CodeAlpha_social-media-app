@@ -103,7 +103,7 @@ async function loadPosts() {
 
   try {
 
-    const res = await fetch("http://localhost:5000/api/posts");
+    const res = await fetch("https://social-media-backend-6ogp.onrender.com/api/posts");
     const data = await res.json();
     allPosts = data.posts;
     const postsDiv = document.getElementById("posts");
@@ -187,7 +187,7 @@ async function loadPosts() {
           ${post.text ? `<div class="post-text">${escapeHtml(post.text)}</div>` : ""}
 
           <!-- IMAGE -->
-          ${post.image ? `<img src="http://localhost:5000/uploads/${post.image}" class="post-image">` : ""}
+          ${post.image ? `<img src="https://social-media-backend-6ogp.onrender.com/uploads/${post.image}" class="post-image">` : ""}
 
           <!-- LIKES -->
           <div class="post-likes">
@@ -278,7 +278,7 @@ async function createPost() {
       formData.append("image", image);
     }
 
-    const res = await fetch("http://localhost:5000/api/posts", {
+    const res = await fetch("https://social-media-backend-6ogp.onrender.com/api/posts", {
       method: "POST",
       headers: {
         "Authorization": "Bearer " + token
@@ -308,7 +308,7 @@ async function likePost(postId) {
 
   try {
 
-    await fetch(`http://localhost:5000/api/posts/${postId}/like`, {
+    await fetch(`https://social-media-backend-6ogp.onrender.com/api/posts/${postId}/like`, {
       method: "PUT",
       headers: {
         "Authorization": "Bearer " + token
@@ -340,7 +340,7 @@ async function commentPost(postId) {
     }
 
     const res = await fetch(
-  `http://localhost:5000/api/posts/${postId}/comment`,
+  `https://social-media-backend-6ogp.onrender.com/api/posts/${postId}/comment`,
 {
       method: "POST",
       headers: {
@@ -385,7 +385,7 @@ async function replyComment(postId, commentId) {
       return; 
     }
 
-    await fetch(`http://localhost:5000/api/posts/${postId}/reply/${commentId}`, {
+    await fetch(`https://social-media-backend-6ogp.onrender.com/api/posts/${postId}/reply/${commentId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

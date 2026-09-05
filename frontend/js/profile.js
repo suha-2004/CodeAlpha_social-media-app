@@ -12,7 +12,7 @@ async function loadProfile() {
   `;
 
   // fetch all posts
-  const res = await fetch("http://localhost:5000/api/posts");
+  const res = await fetch("https://social-media-backend-6ogp.onrender.com/api/posts");
   const data = await res.json();
 
   const myPosts = data.posts.filter(post => post.userId === userId);

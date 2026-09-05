@@ -2,7 +2,7 @@ async function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  const res = await fetch("http://localhost:5000/api/auth/login", {
+  const res = await fetch("https://social-media-backend-6ogp.onrender.com/api/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
